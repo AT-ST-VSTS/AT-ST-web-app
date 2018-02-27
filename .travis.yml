@@ -1,0 +1,70 @@
+sudo: required  
+dist: trusty
+language: node_js
+node_js:
+  - "6.9"
+os:
+  - linux
+addons:
+  chrome: stable
+branches:
+  only:
+    - master
+    - qa
+cache:
+  directories:
+    - ./node_modules/
+stages:
+  - build
+  - test
+  - e2e
+  - name: deploy-master
+    if: branch = master
+  - name: deploy-qa
+    if: branch = qa
+before_install:
+  # start your web application and listen on `localhost`
+  # - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+before_script:
+  - npm i -g npm@5.7.1
+  - npm ci
+jobs:
+  include:
+    - stage: build
+      script: 
+        - ng build --prod
+    - stage: test
+      script: 
+        - export CHROME_BIN=chromium-browser
+        - xvfb-run -a npm run test -- --no-progress --single-run true --watch false --browsers ChromeHeadless
+        # ng test --single-run
+    - stage: e2e
+      script: 
+        - export CHROME_BIN=chromium-browser
+        - xvfb-run -a npm run e2e -- --no-progress --config=protractor-ci.conf.js
+        # ng e2e --single-run
+    # - stage: deploy-master
+    #   script: echo "Deploying master to GitHub pages ..."
+    #   deploy:
+    #     provider: pages
+    #     api_key: $GITHUB_OAUTH_TOKEN
+    #     skip_cleanup: true
+    #     on:
+    #       tags: true
+    # - stage: deploy-qa
+    #   script: echo "Deploying qa to GitHub pages ..."
+    #   deploy:
+    #     provider: pages
+    #     api_key: $GITHUB_OAUTH_TOKEN
+    #     skip_cleanup: true
+    #     on:
+    #       tags: true
+
+
+
+
+
+
+
+
+
