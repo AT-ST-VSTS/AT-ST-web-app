@@ -1,6 +1,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/AT-ST-VSTS/AT-ST-VSTS/badge.svg?branch=master)](https://coveralls.io/github/AT-ST-VSTS/AT-ST-VSTS?branch=master)
 
-[![Build Status](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS.svg?branch=master)](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS)
+[![Travis Build Status](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS.svg?branch=master)](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS)
 
 
 # ATSTVSTS
