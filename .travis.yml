@@ -36,7 +36,8 @@ jobs:
     - stage: test
       script: 
         - export CHROME_BIN=chromium-browser
-        - xvfb-run -a npm run test -- --no-progress --single-run true --watch false --browsers ChromeHeadless
+        - xvfb-run -a npm run test:coverage -- --no-progress --single-run true --watch false --browsers ChromeHeadless
+        - npm run coverage
         # ng test --single-run
     - stage: e2e
       script: 
