@@ -1,3 +1,8 @@
+[![Coverage Status](https://coveralls.io/repos/github/AT-ST-VSTS/AT-ST-VSTS/badge.svg?branch=master)](https://coveralls.io/github/AT-ST-VSTS/AT-ST-VSTS?branch=master)
+
+[![Travis Build Status](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS.svg?branch=master)](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS)
+
+
 # ATSTVSTS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
