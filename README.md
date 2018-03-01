@@ -1,6 +1,9 @@
-[![Coverage Status](https://coveralls.io/repos/github/AT-ST-VSTS/AT-ST-VSTS/badge.svg?branch=qa)](https://coveralls.io/github/AT-ST-VSTS/AT-ST-VSTS?branch=master)
 
 [![Travis Build Status](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS.svg?branch=qa)](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a0a60e6670b416c98d766afaa14f0e1)](https://www.codacy.com/app/CedricCazin/AT-ST-VSTS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AT-ST-VSTS/AT-ST-VSTS&amp;utm_campaign=Badge_Grade)
+
+[![Coverage Status](https://coveralls.io/repos/github/AT-ST-VSTS/AT-ST-VSTS/badge.svg?branch=master)](https://coveralls.io/github/AT-ST-VSTS/AT-ST-VSTS?branch=master)
 
 
 # ATSTVSTS
