@@ -5,6 +5,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a0a60e6670b416c98d766afaa14f0e1)](https://www.codacy.com/app/CedricCazin/AT-ST-VSTS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AT-ST-VSTS/AT-ST-VSTS&amp;utm_campaign=Badge_Grade)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/at-st-vsts/at-st-vsts/badge.svg?targetFile=package.json)](https://snyk.io/test/github/at-st-vsts/at-st-vsts?targetFile=package.json)
+
 # ATSTVSTS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
