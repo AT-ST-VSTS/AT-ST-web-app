@@ -12,46 +12,58 @@ branches:
     - master
     - qa
 cache:
+  bundler: true
   directories:
     - ./node_modules/
 stages:
-  - build
-  - test
-  - e2e
-  - name: deploy-master
+  - cache
+  # - name: tests-prod
+  #   if: branch = master
+  # - name: build-qa
+  #   if: branch = qa
+  - tests
+  - name: deploy-prod
     if: branch = master
-  - name: deploy-qa
-    if: branch = qa
-before_install:
-  # start your web application and listen on `localhost`
-  # - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
-before_script:
-  - npm i -g npm@5.7.1
-  - npm ci
+  # - name: deploy-qa
+  #   if: branch = qa
+# before_install:
+#   # start your web application and listen on `localhost`
+#   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+# install:
+#   - npm i -g npm@5.7.1
+#   - npm ci
 jobs:
   include:
-    - stage: build
-      script: 
-        - ng build --prod
-    - stage: test
+    - stage: cache
+      script: echo "Cache node_modules ..."
+    # - stage: build-prod
+    #   script: 
+    #     - npm run build:prod
+    # - stage: build-qa
+    #   script: 
+    #     - npm run build:qa
+    - stage: tests
       script: 
         - export CHROME_BIN=chromium-browser
         - xvfb-run -a npm run test:coverage -- --no-progress --single-run true --watch false --browsers ChromeHeadless
         - npm run coverage
         # ng test --single-run
-    - stage: e2e
-      script: 
-        - export CHROME_BIN=chromium-browser
+    - stage: tests
+      script:
         - xvfb-run -a npm run e2e -- --no-progress --config=protractor-ci.conf.js
         # ng e2e --single-run
-    # - stage: deploy-master
-    #   script: echo "Deploying master to GitHub pages ..."
-    #   deploy:
-    #     provider: pages
-    #     api_key: $GITHUB_OAUTH_TOKEN
-    #     skip_cleanup: true
-    #     on:
-    #       tags: true
+    - stage: deploy-prod
+      script: 
+        - echo "Deploying prod to GitHub pages ..."
+        - npm run build:prod
+      deploy:
+        provider: pages
+        api_key: $GITHUB_OAUTH_TOKEN
+        local-dir: dist
+        keep-history: true
+        skip_cleanup: true
+        on:
+          branch: master
     # - stage: deploy-qa
     #   script: echo "Deploying qa to GitHub pages ..."
     #   deploy:
@@ -59,7 +71,8 @@ jobs:
     #     api_key: $GITHUB_OAUTH_TOKEN
     #     skip_cleanup: true
     #     on:
-    #       tags: true
+    #       branch: qa
+
 
 
 
