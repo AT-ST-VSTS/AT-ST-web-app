@@ -23,7 +23,7 @@ stages:
   #   if: branch = qa
   - tests
   - name: deploy-prod
-    if: branch = master
+    if: branch = master AND type = push 
   # - name: deploy-qa
   #   if: branch = qa
 # before_install:
