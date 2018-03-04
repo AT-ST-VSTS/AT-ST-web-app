@@ -7,6 +7,13 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/at-st-vsts/at-st-vsts/badge.svg?targetFile=package.json)](https://snyk.io/test/github/at-st-vsts/at-st-vsts?targetFile=package.json)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/maintainability)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-VSTS/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/test_coverage)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-VSTS/test_coverage)
+
+[![dependencies Status](https://david-dm.org/AT-ST-VSTS/AT-ST-VSTS/status.svg)](https://david-dm.org/AT-ST-VSTS/AT-ST-VSTS)
+[![devDependencies Status](https://david-dm.org/AT-ST-VSTS/AT-ST-VSTS/dev-status.svg)](https://david-dm.org/AT-ST-VSTS/AT-ST-VSTS?type=dev)
+
 # ATSTVSTS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.

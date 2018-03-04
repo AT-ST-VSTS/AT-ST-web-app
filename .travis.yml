@@ -5,27 +5,22 @@ node_js:
   - "6.9"
 os:
   - linux
+rvm:
+  - 2.2.0
 addons:
   chrome: stable
 branches:
   only:
     - master
-    - qa
 cache:
   bundler: true
   directories:
     - ./node_modules/
 stages:
   - cache
-  # - name: tests-prod
-  #   if: branch = master
-  # - name: build-qa
-  #   if: branch = qa
   - tests
-  - name: deploy-prod
-    if: branch = master AND type = push 
-  # - name: deploy-qa
-  #   if: branch = qa
+  - name: deploy-master
+    if: branch = master AND type = push
 # before_install:
 #   # start your web application and listen on `localhost`
 #   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
@@ -36,42 +31,35 @@ jobs:
   include:
     - stage: cache
       script: echo "Cache node_modules ..."
-    # - stage: build-prod
-    #   script: 
-    #     - npm run build:prod
-    # - stage: build-qa
-    #   script: 
-    #     - npm run build:qa
     - stage: tests
+      before_script:
+        - rm -rf ./coverage
+        # code climate
+        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        - chmod +x ./cc-test-reporter
+        - ./cc-test-reporter before-build
       script: 
         - export CHROME_BIN=chromium-browser
+        # test with coverage
         - xvfb-run -a npm run test:coverage -- --no-progress --single-run true --watch false --browsers ChromeHeadless
-        - npm run coverage
-        # ng test --single-run
+      after_script:
+        # coveralls
+        - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+        # code climate
+        - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - stage: tests
       script:
+        # e2e tests
         - xvfb-run -a npm run e2e -- --no-progress --config=protractor-ci.conf.js
-        # ng e2e --single-run
-    - stage: deploy-prod
+    - stage: deploy-master
       script: 
-        - echo "Deploying prod to GitHub pages ..."
+        - echo "Deploying prod to azure ..."
         - npm run build:prod
       deploy:
-        provider: pages
-        api_key: $GITHUB_OAUTH_TOKEN
-        local-dir: dist
-        keep-history: true
-        skip_cleanup: true
-        on:
-          branch: master
-    # - stage: deploy-qa
-    #   script: echo "Deploying qa to GitHub pages ..."
-    #   deploy:
-    #     provider: pages
-    #     api_key: $GITHUB_OAUTH_TOKEN
-    #     skip_cleanup: true
-    #     on:
-    #       branch: qa
+        provider: azure_web_apps
+        site: at-st-vsts
+        slot: at-st-vsts-staging
+        on: master
 
 
 
