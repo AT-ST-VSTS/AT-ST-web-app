@@ -58,8 +58,8 @@ jobs:
       deploy:
         provider: azure_web_apps
         skip_cleanup: true
-        site: at-st-vsts
-        slot: at-st-vsts-staging
+        site: at-st-app
+        slot: at-st-app-staging
         on: master
 
 
