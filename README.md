@@ -3,13 +3,11 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/AT-ST-VSTS/AT-ST-web-app/badge.svg?branch=master)](https://coveralls.io/github/AT-ST-VSTS/AT-ST-web-app?branch=master)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a0a60e6670b416c98d766afaa14f0e1)](https://www.codacy.com/app/CedricCazin/AT-ST-web-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AT-ST-VSTS/AT-ST-web-app&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4560628019b941738d07dbb7d792bd76)](https://www.codacy.com/app/CedricCazin/AT-ST-web-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AT-ST-VSTS/AT-ST-web-app&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/4560628019b941738d07dbb7d792bd76)](https://www.codacy.com/app/CedricCazin/AT-ST-web-app?utm_source=github.com&utm_medium=referral&utm_content=AT-ST-VSTS/AT-ST-web-app&utm_campaign=Badge_Coverage)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/at-st-vsts/AT-ST-web-app/badge.svg?targetFile=package.json)](https://snyk.io/test/github/at-st-vsts/AT-ST-web-app?targetFile=package.json)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/maintainability)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-web-app/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/test_coverage)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-web-app/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e4e7b70f43be70467bd2/maintainability)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-web-app/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e4e7b70f43be70467bd2/test_coverage)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-web-app/test_coverage)
 
 [![dependencies Status](https://david-dm.org/AT-ST-VSTS/AT-ST-web-app/status.svg)](https://david-dm.org/AT-ST-VSTS/AT-ST-web-app)
 [![devDependencies Status](https://david-dm.org/AT-ST-VSTS/AT-ST-web-app/dev-status.svg)](https://david-dm.org/AT-ST-VSTS/AT-ST-web-app?type=dev)
