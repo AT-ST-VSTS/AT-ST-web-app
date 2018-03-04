@@ -44,7 +44,9 @@ jobs:
         - xvfb-run -a npm run test:coverage -- --no-progress --single-run true --watch false --browsers ChromeHeadless
       after_script:
         # coveralls
-        - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+        - cat ./coverage/lcov.info | coveralls
+        # codacy
+        - cat ./coverage/lcov.info | codacy-coverage --language typescript
         # code climate
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - stage: tests
