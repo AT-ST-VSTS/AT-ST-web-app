@@ -1,18 +1,19 @@
 
-[![Travis Build Status](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS.svg?branch=master)](https://travis-ci.org/AT-ST-VSTS/AT-ST-VSTS)
+[![Travis Build Status](https://travis-ci.org/AT-ST-VSTS/AT-ST-web-app.svg?branch=master)](https://travis-ci.org/AT-ST-VSTS/AT-ST-web-app)
 
-[![Coverage Status](https://coveralls.io/repos/github/AT-ST-VSTS/AT-ST-VSTS/badge.svg?branch=master)](https://coveralls.io/github/AT-ST-VSTS/AT-ST-VSTS?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/AT-ST-VSTS/AT-ST-web-app/badge.svg?branch=master)](https://coveralls.io/github/AT-ST-VSTS/AT-ST-web-app?branch=master)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a0a60e6670b416c98d766afaa14f0e1)](https://www.codacy.com/app/CedricCazin/AT-ST-VSTS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AT-ST-VSTS/AT-ST-VSTS&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a0a60e6670b416c98d766afaa14f0e1)](https://www.codacy.com/app/CedricCazin/AT-ST-web-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AT-ST-VSTS/AT-ST-web-app&amp;utm_campaign=Badge_Grade)
 
-[![Known Vulnerabilities](https://snyk.io/test/github/at-st-vsts/at-st-vsts/badge.svg?targetFile=package.json)](https://snyk.io/test/github/at-st-vsts/at-st-vsts?targetFile=package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/at-st-vsts/AT-ST-web-app/badge.svg?targetFile=package.json)](https://snyk.io/test/github/at-st-vsts/AT-ST-web-app?targetFile=package.json)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/maintainability)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-VSTS/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/maintainability)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-web-app/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/test_coverage)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-VSTS/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/test_coverage)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-web-app/test_coverage)
 
-[![dependencies Status](https://david-dm.org/AT-ST-VSTS/AT-ST-VSTS/status.svg)](https://david-dm.org/AT-ST-VSTS/AT-ST-VSTS)
-[![devDependencies Status](https://david-dm.org/AT-ST-VSTS/AT-ST-VSTS/dev-status.svg)](https://david-dm.org/AT-ST-VSTS/AT-ST-VSTS?type=dev)
+[![dependencies Status](https://david-dm.org/AT-ST-VSTS/AT-ST-web-app/status.svg)](https://david-dm.org/AT-ST-VSTS/AT-ST-web-app)
+[![devDependencies Status](https://david-dm.org/AT-ST-VSTS/AT-ST-web-app/dev-status.svg)](https://david-dm.org/AT-ST-VSTS/AT-ST-web-app?type=dev)
+
 
 # ATSTVSTS
 
