@@ -5,6 +5,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a0a60e6670b416c98d766afaa14f0e1)](https://www.codacy.com/app/CedricCazin/AT-ST-web-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AT-ST-VSTS/AT-ST-web-app&amp;utm_campaign=Badge_Grade)
 
+[![Codacy](https://api.codacy.com/project/badge/coverage/3c7f5de6ce734762981d3e689de7b941)](https://www.codacy.com/app/codacy/node-codacy-coverage)
+
 [![Known Vulnerabilities](https://snyk.io/test/github/at-st-vsts/AT-ST-web-app/badge.svg?targetFile=package.json)](https://snyk.io/test/github/at-st-vsts/AT-ST-web-app?targetFile=package.json)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/034da2bf16c6b7e0668d/maintainability)](https://codeclimate.com/github/AT-ST-VSTS/AT-ST-web-app/maintainability)
