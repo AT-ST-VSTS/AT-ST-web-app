@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
-import { LoginExternalComponent } from './login-external/login-external.component';
+import { RegisterExternalComponent } from './register-external/register-external.component';
 import { LoginWithTwoFactorComponent } from './login-with-two-factor/login-with-two-factor.component';
 import { LoginWithRecoveryCodeComponent } from './login-with-recovery-code/login-with-recovery-code.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -23,7 +23,7 @@ const authRoutes: Routes = [
   { path: 'auth/login', component: LoginComponent },
   { path: 'auth/login-with-recovery-code', component: LoginWithRecoveryCodeComponent },
   { path: 'auth/login-with-two-factor', component: LoginWithTwoFactorComponent },
-  { path: 'auth/login-external', component: LoginExternalComponent },
+  { path: 'auth/register-external', component: RegisterExternalComponent },
   { path: 'auth/logout', component: LogoutComponent, canActivate: [ AuthGuard ] },
   { path: 'auth/register', component: RegisterComponent },
   { path: 'auth/confirm-email', component: ConfirmEmailComponent },

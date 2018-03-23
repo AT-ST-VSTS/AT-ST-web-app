@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
-import { LoginExternalComponent } from './login-external/login-external.component';
+import { RegisterExternalComponent } from './register-external/register-external.component';
 import { LoginWithTwoFactorComponent } from './login-with-two-factor/login-with-two-factor.component';
 import { LoginWithRecoveryCodeComponent } from './login-with-recovery-code/login-with-recovery-code.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -41,7 +41,7 @@ import { MatNativeDateModule } from '@angular/material';
   declarations: [
 
     LoginComponent,
-    LoginExternalComponent,
+    RegisterExternalComponent,
     LoginWithTwoFactorComponent,
     LoginWithRecoveryCodeComponent,
     LogoutComponent,

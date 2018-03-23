@@ -12,7 +12,7 @@ const appRoutes: Routes = [
     { path: '',   component: AppComponent },
 
     // https://angular.io/guide/router#canload-guard-guarding-unauthorized-loading-of-feature-modules
-    { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule', canLoad: [ AuthGuard ] },
+    // { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule', canLoad: [ AuthGuard ] },
 
     // https://angular.io/guide/router#custom-preloading-strategy
     // { path: 'stuff', loadChildren: 'app/stuff/stuff.module#StuffModule', data: { preload: true } },
