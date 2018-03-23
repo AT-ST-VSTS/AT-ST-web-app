@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginExternalComponent } from './login-external.component';
+import { RegisterExternalComponent } from './register-external.component';
 
-describe('ExternalLoginComponent', () => {
-  let component: LoginExternalComponent;
-  let fixture: ComponentFixture<LoginExternalComponent>;
+describe('RegisterExternalComponent', () => {
+  let component: RegisterExternalComponent;
+  let fixture: ComponentFixture<RegisterExternalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginExternalComponent ]
+      declarations: [ RegisterExternalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginExternalComponent);
+    fixture = TestBed.createComponent(RegisterExternalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

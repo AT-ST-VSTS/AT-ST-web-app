@@ -8,9 +8,10 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { CoreMaterialModule } from './material.module';
 import { MatNativeDateModule } from '@angular/material';
 
-import { AuthModule } from './auth/auth.module';
-import { AccountModule } from './account/account.module';
 import { ErrorsModule } from './errors/errors.module';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   imports: [
@@ -19,11 +20,11 @@ import { ErrorsModule } from './errors/errors.module';
     FormsModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
     CoreMaterialModule,
 
     AuthModule,
-    AccountModule,
     ErrorsModule
   ],
   exports: [

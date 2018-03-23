@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { AdminDashboardComponent } from './admin-dashboard.component';
 
-import { AuthGuard } from '../core/auth/auth-guard.service';
+import { AuthGuard } from '../../core/auth/auth-guard.service';
 
 const adminRoutes: Routes = [
   {
