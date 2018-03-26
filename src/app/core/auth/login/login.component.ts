@@ -13,6 +13,7 @@ import { LoginModel, LoginExternalModel } from '../auth.models';
 export class LoginComponent implements OnInit {
 
   message: string;
+  hide = true;
 
   loginForm: FormGroup;
   // loginExternalForm: FormGroup;
