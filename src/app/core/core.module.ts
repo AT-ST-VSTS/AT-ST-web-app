@@ -5,23 +5,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { CoreMaterialModule } from './material.module';
 import { MatNativeDateModule } from '@angular/material';
 
 import { ErrorsModule } from './errors/errors.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AuthModule } from './auth/auth.module';
+import { CoreAngularModule } from './CoreAngular.module';
+import { CoreMaterialModule } from './CoreMaterial.module';
 
 @NgModule({
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    MatNativeDateModule,
-    ReactiveFormsModule,
-    HttpClientModule,
 
+    CoreAngularModule,
     CoreMaterialModule,
 
     AuthModule,

@@ -17,22 +17,19 @@ import { AuthRoutingModule } from './auth-routing.module';
 
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
-import { CoreMaterialModule } from '../material.module';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material';
+import { CoreAngularModule } from '../CoreAngular.module';
+import { CoreMaterialModule } from '../CoreMaterial.module';
 
 
 @NgModule({
   imports: [
 
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    MatNativeDateModule,
-    ReactiveFormsModule,
-
+    CoreAngularModule,
     CoreMaterialModule,
 
     AuthRoutingModule,
