@@ -18,7 +18,7 @@ export class AuthService {
   // store the URL so we can redirect after logging in
   redirectUrl: string;
 
-  constructor(private http: HttpClient, window: Window) { }
+  constructor(private http: HttpClient) { }
 
   login(login: LoginModel): Observable<boolean> {
     const url = 'https://at-st-api-staging.azurewebsites.net/Auth/Login';
