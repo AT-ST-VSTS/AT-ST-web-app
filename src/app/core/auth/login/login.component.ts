@@ -88,10 +88,13 @@ export class LoginComponent implements OnInit {
 
     this.message = 'Trying to log in ...';
 
+    const url = 'https://at-st-api-staging.azurewebsites.net/Auth/LoginExternal?provider=' + loginExternal.provider;
+    $window.location.href = url;
+    
     this.authService.loginExternal(loginexternal).subscribe((response) => {
 
       this.setMessage();
-
+/*
       if (this.authService.isLoggedIn) {
 
         // Get the redirect URL from our auth service
@@ -108,6 +111,7 @@ export class LoginComponent implements OnInit {
         // Redirect the user
         this.router.navigate([redirect], navigationExtras);
       }
+*/
     });
   }
 
