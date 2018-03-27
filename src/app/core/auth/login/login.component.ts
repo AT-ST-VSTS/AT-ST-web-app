@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
   hide = true;
 
   loginForm: FormGroup;
-  // loginExternalForm: FormGroup;
 
   constructor(public authService: AuthService, public router: Router, private fb: FormBuilder) {
     this.setMessage();
@@ -27,9 +26,6 @@ export class LoginComponent implements OnInit {
       rememberMe: false,
     });
 
-    // this.loginExternalForm = this.fb.group({
-    //   provider: ['', Validators.required ],
-    // });
   }
 
   ngOnInit() {
@@ -77,42 +73,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
-
-  onLoginExternalSubmit(provider: string) {
-    // const loginExternalFormModel = this.loginExternalForm.value;
-
-    const loginexternal: LoginExternalModel = {
-      provider: provider,
-    };
-
-    this.message = 'Trying to log in ...';
-
-    this.authService.loginExternal(loginexternal);
-/*
-    .subscribe((response) => {
-
-      this.setMessage();
-      if (this.authService.isLoggedIn) {
-
-        // Get the redirect URL from our auth service
-        // If no redirect has been set, use the default
-        const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/';
-
-        // Set our navigation extras object
-        // that passes on our global query params and fragment
-        const navigationExtras: NavigationExtras = {
-          queryParamsHandling: 'preserve',
-          preserveFragment: true
-        };
-
-        // Redirect the user
-        this.router.navigate([redirect], navigationExtras);
-      }
-
-    });
-    */
-  }
 
   setMessage() {
     this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');

@@ -38,23 +38,6 @@ export class AuthService {
     );
   }
 
-  loginExternal(loginExternal: LoginExternalModel): void {
-
-    const url = 'https://at-st-api-staging.azurewebsites.net/Auth/LoginExternal?provider=' + loginExternal.provider;
-    window.location.href = url;
-
-    // const params = new HttpParams();
-    // params.set('provider', loginExternal.provider);
-
-    // const options = {
-    //   params: params
-    // };
-
-    // return this.http.post<LoginExternalModel>(url, null, options)
-    // .pipe(
-    //   catchError(this.handleError)
-    // );
-  }
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

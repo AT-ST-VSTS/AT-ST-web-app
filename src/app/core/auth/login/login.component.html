@@ -65,10 +65,12 @@
                 </div>
             </form> -->
 
+            <form ngNoForm action="https://at-st-api-staging.azurewebsites.net/Auth/LoginExternal" method="POST">
 
-            <button mat-raised-button (click)="onLoginExternalSubmit('GITHUB')" title="Log in using your GITHUB account">GITHUB</button>
-
-            <button mat-raised-button (click)="onLoginExternalSubmit('Visual Studio Online')" title="Log in using your VSTS account">VSTS</button>
+                <button mat-raised-button type="submit" name="provider" value="GITHUB" title="Log in using your GITHUB account">GITHUB</button>
+                <button mat-raised-button type="submit" name="provider" value="Visual Studio Online" title="Log in using your VSTS account">VSTS</button>
+                            
+            </form>
 
 
         </section>
