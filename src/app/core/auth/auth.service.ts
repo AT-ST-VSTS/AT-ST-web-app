@@ -47,11 +47,11 @@ export class AuthService {
     const options = {
       params: params
     };
-
-    return this.http.post<LoginExternalModel>(url, null, options)
-    .pipe(
-      catchError(this.handleError)
-    );
+    $window.location.href = url;
+    // return this.http.post<LoginExternalModel>(url, null, options)
+    // .pipe(
+    //   catchError(this.handleError)
+    // );
   }
 
   private handleError(error: HttpErrorResponse) {
