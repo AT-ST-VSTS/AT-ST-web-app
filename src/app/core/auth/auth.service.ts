@@ -38,7 +38,7 @@ export class AuthService {
     );
   }
 
-  loginExternal(loginExternal: LoginExternalModel): Observable<boolean> {
+  loginExternal(loginExternal: LoginExternalModel): void {
     const url = 'https://at-st-api-staging.azurewebsites.net/Auth/LoginExternal?provider=' + loginExternal.provider;
 
     const params = new HttpParams();
@@ -47,11 +47,11 @@ export class AuthService {
     const options = {
       params: params
     };
-    $window.location.href = url;
-    // return this.http.post<LoginExternalModel>(url, null, options)
-    // .pipe(
-    //   catchError(this.handleError)
-    // );
+
+    return this.http.post<LoginExternalModel>(url, null, options)
+    .pipe(
+      catchError(this.handleError)
+    );
   }
 
   private handleError(error: HttpErrorResponse) {
