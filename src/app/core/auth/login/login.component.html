@@ -9,10 +9,10 @@
 
                 <mat-form-field class="example-full-width">
                     <input matInput placeholder="Email" formControlName="email" id="email">
-                    <mat-error *ngIf="!loginForm['email'].required && loginForm['email'].touched">
+                    <mat-error *ngIf="!loginForm.get('email')['required'] && loginForm.get('email').touched">
                         Email is <strong>required</strong>
                     </mat-error>
-                    <mat-error *ngIf="loginForm['email'].email && loginForm['email'].touched">
+                    <mat-error *ngIf="loginForm.get('email')['email'] && loginForm.get('email').touched">
                         Name is required.
                     </mat-error>
                 </mat-form-field>
@@ -20,7 +20,7 @@
 
                 <mat-form-field>
                     <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="password">
-                    <mat-error *ngIf="!loginForm['password'].required && loginForm['password'].touched">
+                    <mat-error *ngIf="!loginForm.get('password')['required'] && loginForm.get('password').touched">
                         Password is <strong>required</strong>
                     </mat-error>
                     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
